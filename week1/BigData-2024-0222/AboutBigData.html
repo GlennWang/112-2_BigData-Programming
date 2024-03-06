@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Big Data</title>
+    <style>
+        .title {
+            color:brown;
+        }
+        .highlight {
+            color:red;
+        }
+		.font12 {
+			font-size: 1.2em;
+		}
+        .comment {
+            color: green;
+        }
+        #example {
+            color: tomato;
+        }
+        #code {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<h4>課程名稱: <span class='title'>(327426) 數據程式設計</span></h4> 
+<h4>課程用書: <a href="https://www.books.com.tw/products/0010938796?sloc=main" target="_blank">Python大數據特訓班(第三版)，文淵閣工作室, 碁峰</a></h4> 
+<ul>
+<ul id="info">
+    <li>時間: 星期四 8,9,A 堂</li>
+    <li>教室: 宏裕 1223</li>
+    <li>教師: 資工系 王李吉 老師</li>
+    <li>聯絡資訊:
+        <ul>
+            <li>宏裕科技大樓 資工系 336室</li>
+            <li>email: <i>richwang@ntut.edu.tw</i></li>
+        </ul>
+    </li>
+</ul>
+
+<h4> <a href="http://114.34.49.232/~richwang/GetData/HereIAm-Seat-All-112-2.html" target="_blank">請前往填寫座位表</a></h4>
+<h4> <a href="http://114.34.49.232/~richwang/GetData/ShowSeatTable.php?courseID=3&room=312" target="_blank">查看座位表</a></h4>
+
+<h4> <a href="https://aps.ntut.edu.tw/course/tw/ShowSyllabus.jsp?snum=327426&code=12347" target=_blank>課程大綱連結</a> </h4>
+<span class='title'>課程介紹:</span>
+<ul>
+    <li><span class='highlight'>Python: 直譯式簡單易學, 將常用功能與資料結構函式化與物件化，方便使用者直接引用, 用途廣泛, 未來需求高。<br>
+	                            應用範疇: AI, 大數據分析與應用, Machine Learning, 影像處理, ... 等。</span></li>
+    <li><a href="https://www.tiobe.com/tiobe-index/" target=_blank>TIOBE Index</a></li>
+    <li>開發環境的安裝:
+        <ul>
+            <li><a href="https://www.python.org/" target=_blank>Python網站(IDLE)</a></li>
+            <li><a href="https://www.anaconda.com/products/individual" target=_blank>Anaconda(Spyder, jupyter)</a></li>
+            <li><a href="https://jupyter.org/" target=_blank>Jupyter(online)</a></li>
+            <li><a href="https://replit.com/languages/python3" target=_blank>replit 網站 (線上寫程式)</a></li>
+			<li><a href="https://colab.research.google.com/" target=_blank>Google CoLab 網站</a></li>
+        </ul>
+    </li>   
+</ul>
+
+<pre>
+<span id="example">Q: 計算 1 x 2 x 3 x ... x 99 x 100 的乘法結果後面會有幾個零？共有幾位數？</span>
+<hr>解析解:
+1) 因為2x5=10，所以只要找到一對2與5，這樣就會讓乘法結果後面多一個零。
+2) 觀察題目可知 2 的數量會比 5 多，因此找出所有因數 5 的個數即可。
+   100/5 = 20;  先找5的倍數 <-- 一個5。
+   100/25 = 4;  再找5*5=25的倍數 <-- 兩個5。
+   20+4 = 24，因此計算結果後面會有24個零！<hr>
+也可以直接寫Python程式，來算出真正的結果，接著就能夠確定後面連續出現零的個數了！
+<code id='code'>print("This is Python!")
+result = 1
+for k in range(1, 101):  <span class="comment"># 1 ~ 100。 : 表示還有下文！</span>
+    result = result * k
+print(result)
+resultStr = str(result)  <span class="comment"># 將整數轉換成字串！</span>
+
+zeros = 0  <span class="comment"># 存零的個數。</span>
+index = 1  <span class="comment"># 記錄指向最後面字元的位置。</span>
+while( resultStr[-index] == '0' ):  <span class="comment"># 從後面往前檢視是否是零！</span>
+    zeros = zeros + 1
+    index = index + 1
+
+print("共有位數:", len(resultStr))
+print("尾端共有幾個零:", zeros)</span>
+</code> 
+</pre>
+
+</body>
+</html>
