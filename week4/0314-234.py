@@ -26,20 +26,20 @@ def product(A, B):
         return result
 
 # 測試資料
-data = [1, 2, 3, 4]
-A = to_matrix(data, 2, 2)
-print("A =", A)
+# data = [1, 2, 3, 4]
+# A = to_matrix(data, 2, 2)
+# print("A =", A)
 
-B = [[2, 4, 6],
-     [1, 3, 5]]
+# B = [[2, 4, 6],
+#      [1, 3, 5]]
 
-AB = product(A, B)
-print("AB =")
-for row in AB:
-    print("|", end=" ")
-    for val in row:
-        print(val, end="\t")
-    print("|")
+# AB = product(A, B)
+# print("AB =")
+# for row in AB:
+#     print("|", end=" ")
+#     for val in row:
+#         print(val, end="\t")
+#     print("|")
 
 # 計算 A 的 10 次方
 A = [[1, 2], [-2, 1]]
