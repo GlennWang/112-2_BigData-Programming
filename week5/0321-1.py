@@ -3,6 +3,8 @@ import random
 # 思路：生出數字打亂，裝進list後append進另一個list。
 
 def generate_bingo_square(side_length):
+    if side_length < 2 or side_length > 9:
+        return print("out of range")
     numbers = random.sample(range(1, side_length ** 2 + 1), side_length ** 2)
     bingo_square = []
     for i in range(side_length):
@@ -16,4 +18,4 @@ def generate_bingo_square(side_length):
         print("|" + "|".join(str(num).center(4) for num in row) + "|")
         print(horizontal_line)
 
-generate_bingo_square(7)
+generate_bingo_square(5)
