@@ -1,3 +1,39 @@
+"""
+題目：4
+已知依替代式密碼(Substitution Cipher)表如下，
+code_table = 
+a->y
+b->k
+c->x
+d->r
+e->i
+f->q
+g->m
+h->o
+i->f
+j->n
+k->c
+l->z
+m->e
+n->g
+o->l
+p->v
+q->u
+r->a
+s->h
+t->s
+u->j
+v->d
+w->p
+x->w
+y->t
+z->b
+
+
+今有一段訊息，經該上述表格轉換後的結果如下:
+codes = "vayxsfxi eycih viaqixs"。
+請寫一 Python 程式來還原原本的訊息。 
+"""
 code_table = """
 a->y
 b->k
