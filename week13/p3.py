@@ -16,9 +16,9 @@ for city in six_cities:
     city_uni_count = df_unique[df_unique['縣市名稱'].str.contains(city)]['學校名稱'].nunique()
     uni_counts[city] = city_uni_count
 
-print("每個六都區域的大專院校數目:")
-for city, count in uni_counts.items():
-    print(f"{city}: {count}")
+# print("每個六都區域的大專院校數目:")
+# for city, count in uni_counts.items():
+#     print(f"{city}: {count}")
 
 max_city = max(uni_counts, key=uni_counts.get)
 
