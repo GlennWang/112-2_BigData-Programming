@@ -1,8 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import ssl
 
-ssl._create_default_https_context = ssl._create_unverified_context
 url = 'https://stats.moe.gov.tw/files/detail/112/112_student.csv'
 df = pd.read_csv(url)
 

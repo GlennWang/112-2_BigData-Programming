@@ -10,9 +10,7 @@
 """
 import pandas as pd
 import matplotlib.pyplot as plt
-import ssl
 
-ssl._create_default_https_context = ssl._create_unverified_context
 url = 'https://stats.moe.gov.tw/files/detail/112/112_student.csv'
 df = pd.read_csv(url)
 
@@ -20,7 +18,6 @@ filtered_df = df[(df['學校名稱'] == '國立臺北科技大學') & (df['日�
 
 male_df = filtered_df[['一年級男', '二年級男', '三年級男', '四年級男']].values.flatten()
 female_df = filtered_df[['一年級女', '二年級女', '三年級女', '四年級女']].values.flatten()
-
 
 x = range(1, 5)
 x_male = [i - 0.1 for i in x]
