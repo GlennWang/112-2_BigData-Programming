@@ -63,6 +63,8 @@ df_filtered['一年級女'] = df_filtered['一年級女'].astype(str).str.replac
 # 將數據按學年度和學校名稱分組
 grouped = df_filtered.groupby(['學年度', '學校名稱']).sum().reset_index()
 
+print(grouped)
+
 # 分列柱狀圖
 fig1, axs1 = plt.subplots(1, len(schools), figsize=(25, 5), sharey=True)
 fig1.suptitle('各學年度各學校日間部大學一年級男女生人數（分列）', fontsize=20)
