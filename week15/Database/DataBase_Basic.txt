@@ -1,0 +1,40 @@
+(*) 安裝 MySQL
+    1) 請安裝 xampp，使用該軟體中的 MySQL (MariaDB) client，來進行 MySQL 的練習。
+    2) MySQL Community Download: 從 MySQL Community Serverj 網站下載。 
+       https://chwang12341.medium.com/mysql-學習筆記-二-一分鐘輕鬆瞭解如何在windows上安裝mysql-63cce07c6a6c
+
+(*) SQL: Structured query language 結構化的查詢語言。
+
+(*) SQL語言
+SQL指令及主要分類(DDL, DML, DCL, TCL)：
+DDL (Data Definition Language)
+	用來定義資料庫結構的指令，例如：綱要schemas, 資料表tables ...。
+	CREATE, DROP, ALTER, RENAME, TRUNCATE
+DML (Data Manipulation Language)
+	用來處理資料庫中的資料的指令，一般資料的新增、修改、刪除、查詢等運算，都是屬於DML指令類。
+	SELECT, INSERT, UPDATE, DELETE
+DCL (Data Control Language)
+	用來控制管理資料庫的使用權限及相關安全設定的管控指令。
+	GRANT, REVOKE
+TCL (Transaction Control Language)
+	管理資料庫中交易的指令。
+	START TRANSACTION (BEGIN, BEGIN WORK), COMMIT, ROLLBACK
+
+(*) 歐美地區的開發人員把這四種指令，以「CRUD」(分別為 Create, Retrieve, Update, Delete)來稱呼；
+    而亞洲地區使用漢語的開發人員，或可能以四個漢字：增查改刪 來略稱。
+	
+線上編譯器: including MySQL
+https://www.mycompiler.io/new/mysql
+
+Database: 
+(*) table: 呈現二維矩形樣式的資料內容。
+(*) fields(columns) and records(rows)。
+(*) database = tables = table_1 + table_2 + ... + table_n。
+(*) database managenment system: DBMS。
+(*) relational DBMS (RDBMS): 可以透過相同的欄位，讓不同資料表之間建立聯繫。
+
+資料庫程式的主要功能操作:
+1. 新增
+2. 查詢
+3. 修改(更新)
+4. 刪除
